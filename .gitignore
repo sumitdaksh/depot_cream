@@ -1,0 +1,14 @@
+
+# ignore bungle
+/.bundle
+
+
+
+# ignore database
+/db/*.sqlite3
+/db/*sqlite3-journal
+
+
+# ignore temp file and log file
+/temp
+/log/*.log
