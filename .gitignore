@@ -1,6 +1,7 @@
 
 # ignore bungle
 /.bundle
+/.idea
 
 
 
