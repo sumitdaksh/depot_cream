@@ -1,0 +1,19 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Pargmatic catalog</h1>
+<% @products.each do |pr| %>
+<div class="entry">
+  <%= image_tag(pr.image_url) %>
+  <h3> <%= pr.title %></h3>
+
+  <P><%= pr.description %></P>
+  <div class="price-line">
+    <span class=""><%= number_to_currency(pr.price)  %></span>
+
+  </div>
+
+
+</div>
+<% end  %>

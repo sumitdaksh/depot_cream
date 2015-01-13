@@ -6,9 +6,45 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller.controller_name %>" >
+
+<div id="banner">
+  <%= image_tag("image.png")  %>
+  <%= @page_title || "Paramatics Bookself" %>
+
+</div>
+
+
+    <div id="columns">
+      <div id="slide">
+        <ul>
+          <li><a href="#">Home</a> </li>
+          <li><a href="#">Question</a></li>
+          <li><a href="#">News</a> </li>
+          <li><a href="#">contacts</a> </li>
+        </ul>
+
+
+      </div>
+
+
+
+
+    <div id="main">
+
+
+
+
 
 <%= yield %>
+
+
+    </div>
+  </div>
+
+
+
+
 
 </body>
 </html>

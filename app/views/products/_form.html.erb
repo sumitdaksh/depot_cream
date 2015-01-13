@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control input-sm", placeholder: "title" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :image_url %><br>
     <%= f.text_field :image_url %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
