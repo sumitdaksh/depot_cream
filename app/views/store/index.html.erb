@@ -3,17 +3,22 @@
 <% end %>
 
 <h1>Your Pargmatic catalog</h1>
+<% cache ['store', Product.latest] do %>
 <% @products.each do |pr| %>
-<div class="entry">
+<% cache ['entry', pr] do %>
+    <div class="entry">
   <%= image_tag(pr.image_url) %>
   <h3> <%= pr.title %></h3>
 
   <P><%= pr.description %></P>
   <div class="price-line">
-    <span class=""><%= number_to_currency(pr.price)  %></span>
+    <span class="price"><%= number_to_currency(pr.price)  %></span>
+    <%= button_to 'Add to Cart', line_items_path(product_id: pr) %>
 
   </div>
 
 
 </div>
+      <% end %>
+    <% end %>
 <% end  %>
